@@ -1,18 +1,23 @@
-# Automated Eval Dataset Generator
+# automated-eval-dataset-generator
 
-> A system that continuously mines production LLM logs, clusters interactions, and automatically converts them into labeled evaluation test cases.
+Pipeline to automatically extract, format, and generate QA pairs from raw documents to construct LLM evaluation datasets.
 
-## 🛠️ Tech Stack
-- **Core Technology**: Python, scikit-learn, HDBSCAN, ClickHouse
-- **Architecture**: Microservices, Event-Driven, AI-Native
+## Features
+- Fully automated workflow.
+- Secure, scalable architecture.
+- Built-in telemetry and observability.
 
-## 🚀 Step-by-Step Setup
+## Technologies
+- Python, HuggingFace Datasets
+
+## Getting Started
+Ensure you have the required dependencies installed on your system.
+
 ```bash
-git clone https://github.com/SumitDalavi/automated-eval-dataset-generator.git
-cd automated-eval-dataset-generator
-docker-compose up -d --build
+# Setup & Test
+pip install -r requirements.txt
+pytest
 ```
 
-## 👨‍💻 Author
-**Sumit Dalavi** — Senior DevSecOps / Platform Engineer
-[GitHub](https://github.com/SumitDalavi) | [LinkedIn](https://in.linkedin.com/in/sumit-dalavi-762838129)
+## Architecture
+Please see the [Architecture Document](docs/architecture.md) for sequence diagrams and system design details.
