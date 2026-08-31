@@ -36,3 +36,4 @@ htmlcov/
 coverage.xml
 
 .venv/
+datasets/*.jsonl
