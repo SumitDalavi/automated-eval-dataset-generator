@@ -4,6 +4,10 @@
 # automated-eval-dataset-generator
 
 [![Release](https://img.shields.io/github/v/release/SumitDalavi/automated-eval-dataset-generator?color=blue&logo=github)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
+[![Release Workflow](https://github.com/SumitDalavi/automated-eval-dataset-generator/actions/workflows/release.yml/badge.svg)](https://github.com/SumitDalavi/automated-eval-dataset-generator/actions/workflows/release.yml)
+[![SBOM](https://img.shields.io/badge/SBOM-SPDX%20JSON-blueviolet?logo=spdx)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
+
+[![Release](https://img.shields.io/github/v/release/SumitDalavi/automated-eval-dataset-generator?color=blue&logo=github)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
 [![SBOM](https://img.shields.io/badge/SBOM-SPDX%20JSON-blueviolet?logo=spdx)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
 
 Pipeline to automatically extract, format, and generate QA pairs from raw documents to construct LLM evaluation datasets.
@@ -28,7 +32,7 @@ pytest
 ## Architecture
 Please see the [Architecture Document](docs/architecture.md) for sequence diagrams and system design details.
 
-## Release & Verification
+## Release & Security Verification
 
 The project includes an automated DevSecOps release pipeline (`.github/workflows/release.yml`) triggered on semantic version tags (`v*.*.*`).
 
@@ -48,3 +52,10 @@ gh release view v0.1.0 --repo SumitDalavi/automated-eval-dataset-generator
 gh release download v0.1.0 --repo SumitDalavi/automated-eval-dataset-generator --pattern "sbom.spdx.json"
 cat sbom.spdx.json | jq .
 ```
+
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Runbook](docs/runbook.md)
+- [Decisions](docs/decisions.md)
+- [Changelog](docs/changelog.md)
