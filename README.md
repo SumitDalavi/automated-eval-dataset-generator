@@ -1,14 +1,15 @@
 > **NOTE:** This repository is an archival lab or partial prototype. It is not actively maintained and should not be used as a reference for production-grade deployments or performance benchmarks.
 
-
 # automated-eval-dataset-generator
 
-[![Release](https://img.shields.io/github/v/release/SumitDalavi/automated-eval-dataset-generator?color=blue&logo=github)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
+[![CI Pipeline](https://github.com/SumitDalavi/automated-eval-dataset-generator/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/SumitDalavi/automated-eval-dataset-generator/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/SumitDalavi/automated-eval-dataset-generator?color=0969da&label=release&logo=github)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
 [![Release Workflow](https://github.com/SumitDalavi/automated-eval-dataset-generator/actions/workflows/release.yml/badge.svg)](https://github.com/SumitDalavi/automated-eval-dataset-generator/actions/workflows/release.yml)
-[![SBOM](https://img.shields.io/badge/SBOM-SPDX%20JSON-blueviolet?logo=spdx)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
-
-[![Release](https://img.shields.io/github/v/release/SumitDalavi/automated-eval-dataset-generator?color=blue&logo=github)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
-[![SBOM](https://img.shields.io/badge/SBOM-SPDX%20JSON-blueviolet?logo=spdx)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases)
+[![GHCR Container](https://img.shields.io/badge/ghcr.io-v0.2.0-blue?logo=docker&logoColor=white)](https://github.com/SumitDalavi/automated-eval-dataset-generator/pkgs/container/automated-eval-dataset-generator)
+[![PyPI Wheel](https://img.shields.io/badge/wheel-0.2.0-3776ab?logo=pypi&logoColor=white)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases/tag/v0.2.0)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org)
+[![SBOM](https://img.shields.io/badge/SBOM-SPDX%202.3-blueviolet?logo=spdx)](https://github.com/SumitDalavi/automated-eval-dataset-generator/releases/tag/v0.2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 Pipeline to automatically extract, format, and generate QA pairs from raw documents to construct LLM evaluation datasets.
 
