@@ -58,7 +58,12 @@ async def generate(req: GenerateRequest):
 @app.get("/health")
 def health():
     import os
-    return {"status": "ok", "llm_available": bool(os.getenv("OPENAI_API_KEY"))}
+    from src.credential_mode import detect_mode
+    return {
+        "status": "ok",
+        "llm_available": bool(os.getenv("OPENAI_API_KEY")),
+        "mode": detect_mode()
+    }
 
 
 if __name__ == "__main__":

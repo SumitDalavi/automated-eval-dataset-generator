@@ -6,12 +6,20 @@ from typing import List
 
 from src.strategies.base import EvalSample, GenerationStrategy
 
-try:
-    from openai import OpenAI
-    _client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
-    _LLM = bool(os.getenv("OPENAI_API_KEY"))
-except Exception:
-    _LLM = False
+from src.credential_mode import is_live_openai_key
+
+_client = None
+_LLM = is_live_openai_key()
+
+def _get_client():
+    global _client
+    if _client is None:
+        try:
+            from openai import OpenAI
+            _client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
+        except Exception:
+            pass
+    return _client
 
 
 _DIFFICULTY_PROMPTS = {
@@ -48,7 +56,8 @@ class QAStrategy(GenerationStrategy):
         instruction = _DIFFICULTY_PROMPTS.get(difficulty, _DIFFICULTY_PROMPTS["medium"])
         prompt = _QA_PROMPT.format(topic=topic, difficulty=difficulty, instruction=instruction, n=n)
 
-        response = _client.chat.completions.create(
+        client = _get_client()
+        response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=2000,
