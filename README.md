@@ -84,3 +84,11 @@ Enterprise deployment with production-grade backends, security scans, and contai
 - [Runbook](docs/runbook.md)
 - [Decisions](docs/decisions.md)
 - [Changelog](docs/changelog.md)
+
+### Python Package & CLI Installation
+Install directly as a standard Python wheel/package:
+```bash
+pip install .
+# Run the dataset generation CLI:
+eval-gen --help
+```
